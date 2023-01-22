@@ -6,9 +6,9 @@ public class FindMaximum {
 
 	public static <T> void Maximum(T num1, T num2, T num3) {
 		T max = num1;
-		if(((Integer)num2).compareTo((Integer)max)>0 )
+		if(((Float)num2).compareTo((Float)max)>0 && ((Float)num2).compareTo((Float)num3)>0)
 			System.out.println(num2+" is Maximum");
-		else if(((Integer) num3).compareTo((Integer)num2)>0)
+		else if(((Float)num3).compareTo((Float)num2)>0)
 			System.out.println(num3+" is Maximum");
 		else
 			System.out.println(num1+" is Maximum");
@@ -19,15 +19,14 @@ public class FindMaximum {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Enter the First Number : ");
-		Integer num1 = scan.nextInt();
+		Float num1 = scan.nextFloat();
 		
 		System.out.print("Enter the Second Number : ");
-		Integer num2 = scan.nextInt();
+		Float num2 = scan.nextFloat();
 		
 		System.out.print("Enter the Third Number : ");
-		Integer num3 = scan.nextInt();
+		Float num3 = scan.nextFloat();
 		
 		Maximum(num1, num2, num3);
 	}
-
 }
