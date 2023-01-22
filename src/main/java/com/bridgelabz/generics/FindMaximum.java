@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class FindMaximum {
 
-	public static <T> void Maximum(T num1, T num2, T num3) {
-		T max = num1;
-		if(((Float)num2).compareTo((Float)max)>0 && ((Float)num2).compareTo((Float)num3)>0)
-			System.out.println(num2+" is Maximum");
-		else if(((Float)num3).compareTo((Float)num2)>0)
-			System.out.println(num3+" is Maximum");
+	public static <T> void Maximum(T str1, T str2, T str3) {
+		T max = str1;
+		if(((String)str2).compareTo((String)max)>0 && ((String)str2).compareTo((String)str3)>0)
+			System.out.println(str2+" is Maximum");
+		else if(((String)str3).compareTo((String)max)>0)
+			System.out.println(str3+" is Maximum");
 		else
-			System.out.println(num1+" is Maximum");
+			System.out.println(str1+" is Maximum");
 	}
 	
 	public static void main(String[] args) {
@@ -19,14 +19,14 @@ public class FindMaximum {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Enter the First Number : ");
-		Float num1 = scan.nextFloat();
+		String str1 = scan.next();
 		
 		System.out.print("Enter the Second Number : ");
-		Float num2 = scan.nextFloat();
+		String str2 = scan.next();
 		
 		System.out.print("Enter the Third Number : ");
-		Float num3 = scan.nextFloat();
+		String str3 = scan.next();
 		
-		Maximum(num1, num2, num3);
+		Maximum(str1, str2, str3);
 	}
 }
